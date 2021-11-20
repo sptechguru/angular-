@@ -1,0 +1,23 @@
+<br/>
+<br/>
+<div class="container">
+  <button class="btn btn-success ml-2" (click)="updateRow()" >Update Row</button>
+<button class="btn btn-primary ml-2" (click)="updatecell()">Updated Cell</button>
+<button class="btn btn-success ml-2" (click)="UpdateAllRow()">Update ALL Row</button>
+<button class="btn btn-danger ml-2"(click)="clear()">ClearALL</button>
+<br/>
+<br/>
+
+<ag-grid-angular
+    style="width: 90%; height: 800px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    (gridReady)=OngridReaddy($event)
+    [pagination] = 'true'
+    [paginationPageSize]="true"
+
+>
+</ag-grid-angular>
+
+</div>

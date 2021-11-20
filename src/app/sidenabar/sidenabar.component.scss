@@ -1,0 +1,57 @@
+
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+mat-sidenav {
+    width: 280px;
+    padding:15px;
+}
+.ngb{
+  // background-image: linear-gradient(skyblue, blue);
+  background-color:orchid;
+}
+.mat-drawer {
+    // background-color: #ff4081;
+    background-color:orchid;
+    // background-color: #ccc;
+
+    color:#000
+}
+.main-content {
+    padding:20px;
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+ul {
+  list-style-type: none;
+  // border: 1px solid #555;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+}
+
+li a {
+  display: block;
+  color: #000;
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  height: 100%;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-image: linear-gradient(red, yellow);;
+  color: white;
+}
+
+
