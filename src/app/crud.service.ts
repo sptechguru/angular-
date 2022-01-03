@@ -15,7 +15,8 @@ export class CrudService {
   // url = 'http://dummy.restapiexample.com/api/v1/employees'
 
   // url = "https://api.covid19india.org/data.json"
-
+  
+  
   prodcut(): Observable<any>{
   return this.http.get(this.url)
 

@@ -1,5 +1,6 @@
 import { CrudService } from './../crud.service';
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../service/api.service';
 
 @Component({
   selector: 'app-crud',
@@ -10,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class CrudComponent implements OnInit {
 
-  constructor(private _crudService:CrudService) { }
+  constructor(private apiservie:ApiService) { }
 
   productData:any;
   products :any;
@@ -18,12 +19,7 @@ export class CrudComponent implements OnInit {
 
   ngOnInit() {
 
-    // this._crudService.getData().subscribe(res=>{
-    //   console.log(res);
-
-    // })
-
-    this._crudService.prodcut()
+    this.apiservie.getMethod()
     .subscribe(productData => this.products = productData)
     console.log(`${this.productData}`);
   }

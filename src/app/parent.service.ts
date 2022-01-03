@@ -17,5 +17,5 @@ export class ParentService {
 
 // Behavioursubject now using
 
-userName = new BehaviorSubject('InnoEye')
+userName = new BehaviorSubject('santosh')
 }

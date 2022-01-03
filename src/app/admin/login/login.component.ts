@@ -28,5 +28,11 @@ export class LoginComponent implements OnInit {
 
   });
 
+  metod(eve:any){
+    console.log(eve);
+    
+
+  }
+
 
 }

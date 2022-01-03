@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
 import { PropertyDetailsComponent } from './property-details/property-details.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
 
 const routes: Routes = [
 
@@ -30,7 +31,8 @@ const routes: Routes = [
   },
 
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
+  {path: 'home', component:CreateUserComponent },
+  {path: 'homes', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'gallery', component: GalleryComponent},

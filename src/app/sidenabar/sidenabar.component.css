@@ -6,11 +6,11 @@ mat-sidenav {
 }
 
 .ngb {
-  background-color: orchid;
+  background-color: orange;
 }
 
 .mat-drawer {
-  background-color: orchid;
+  background-color: #07dbc3 !important;
   color: #000;
 }
 

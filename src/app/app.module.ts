@@ -25,7 +25,7 @@ import { MapComponent } from './map/map.component';
 import { LoginComponent } from './login/login.component';
 import {MatToolbarModule } from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Child1Component } from './child1/child1.component';
 import { Child2Component } from './child2/child2.component';
 import { PostComponent } from './post/post.component';
@@ -47,6 +47,8 @@ import { ParentinfoComponent } from './parentinfo/parentinfo.component';
 import { ChildinfoComponent } from './childinfo/childinfo.component';
 import { CustobsComponent } from './custobs/custobs.component';
 import { PropertyDetailsComponent } from './property-details/property-details.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
+import { HandlersAuthInterceptor } from './Interceptor/handlers-auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -75,8 +77,7 @@ import { PropertyDetailsComponent } from './property-details/property-details.co
     ChildinfoComponent,
     CustobsComponent,
     PropertyDetailsComponent,
-
-
+    CreateUserComponent,
 
   ],
   imports: [
@@ -103,15 +104,13 @@ import { PropertyDetailsComponent } from './property-details/property-details.co
     BrowserModule,
     AgGridModule.withComponents([]),
     NgxQRCodeModule,
-
-
   ],
 
   //providers is using Dependecy injection for
   // as working in service delvers and all logic is here services
   //Component data send to providers are two types component level module html
 
-  providers: [TestappService],
+  providers: [TestappService], 
   bootstrap: [AppComponent],
   entryComponents: [ChildinfoComponent,ParentinfoComponent]
 })
