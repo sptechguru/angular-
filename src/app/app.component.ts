@@ -1,5 +1,3 @@
-import { ChildinfoComponent } from './childinfo/childinfo.component';
-import { ParentinfoComponent } from './parentinfo/parentinfo.component';
 
 import {
   Component,
@@ -9,8 +7,6 @@ import {
   ComponentRef,
   ComponentFactory
 } from '@angular/core';
-
-
 
 import { NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels } from 'ngx-qrcode2';
 

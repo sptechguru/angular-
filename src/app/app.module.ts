@@ -1,15 +1,18 @@
-import { CrudComponent } from './crud/crud.component';
+import { NewsitemComponent } from './components/newsitem/newsitem.component';
+import { ProdcutsComponent } from './components/Ecommerce/prodcuts/prodcuts.component';
+import { CartsComponent } from './components/Ecommerce/carts/carts.component';
+import { CrudComponent } from './Basic componets/crud/crud.component';
 import { TestappService } from './testapp.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { GalleryComponent } from './gallery/gallery.component';
+import { HomeComponent } from './Basic componets/home/home.component';
+import { AboutComponent } from './Basic componets/about/about.component';
+import { ContactComponent } from './Basic componets/contact/contact.component';
+import { PageNotfoundComponent } from './Basic componets/page-notfound/page-notfound.component';
+import { NavbarComponent } from './Basic componets/navbar/navbar.component';
+import { GalleryComponent } from './Basic componets/gallery/gallery.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -18,37 +21,43 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatTableModule} from '@angular/material/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SignupFormComponent } from './signup-form/signup-form.component';
+import { SignupFormComponent } from './Basic componets/signup-form/signup-form.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
-import { MapComponent } from './map/map.component';
-import { LoginComponent } from './login/login.component';
+import { MapComponent } from './Basic componets/map/map.component';
 import {MatToolbarModule } from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { Child1Component } from './child1/child1.component';
-import { Child2Component } from './child2/child2.component';
-import { PostComponent } from './post/post.component';
+import { Child1Component } from './Basic componets/child1/child1.component';
+import { Child2Component } from './Basic componets/child2/child2.component';
+import { PostComponent } from './Basic componets/post/post.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatDividerModule} from '@angular/material/divider';
-import { FooterComponent } from './footer/footer.component';
-import { SidenabarComponent } from './sidenabar/sidenabar.component';
+import { FooterComponent } from './Basic componets/footer/footer.component';
+import { SidenabarComponent } from './Basic componets/sidenabar/sidenabar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { GridsystemComponent } from './gridsystem/gridsystem.component';
+import { GridsystemComponent } from './Basic componets/gridsystem/gridsystem.component';
 import {AgGridModule} from 'ag-grid-angular';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
-import { DyncompoComponent } from './dyncompo/dyncompo.component';
-import { HicomponentComponent } from './hicomponent/hicomponent.component';
-import { HelloComponent } from './hello/hello.component';
-import { GoodbyeComponent } from './goodbye/goodbye.component';
+import { DyncompoComponent } from './Basic componets/dyncompo/dyncompo.component';
+import { HicomponentComponent } from './Basic componets/hicomponent/hicomponent.component';
+import { HelloComponent } from './Basic componets/hello/hello.component';
+import { GoodbyeComponent } from './Basic componets/goodbye/goodbye.component';
 
 //that is Dynamic components using
-import { ParentinfoComponent } from './parentinfo/parentinfo.component';
-import { ChildinfoComponent } from './childinfo/childinfo.component';
-import { CustobsComponent } from './custobs/custobs.component';
-import { PropertyDetailsComponent } from './property-details/property-details.component';
-import { CreateUserComponent } from './components/create-user/create-user.component';
-import { HandlersAuthInterceptor } from './Interceptor/handlers-auth.interceptor';
+import { ParentinfoComponent } from './Basic componets/parentinfo/parentinfo.component';
+import { ChildinfoComponent } from './Basic componets/childinfo/childinfo.component';
+import { CustobsComponent } from './Basic componets/custobs/custobs.component';
+import { PropertyDetailsComponent } from './Basic componets/property-details/property-details.component';
+// import { HandlersAuthInterceptor } from './Interceptor/handlers-auth.interceptor';
+import { NewSidbarComponent } from './Basic componets/new-sidbar/new-sidbar.component';
+import {MatListModule} from '@angular/material/list';
+import { DashbordsComponent } from './components/dashbords/dashbords.component';
+import { NgSearchFilterModule } from 'ng-search-filter';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { SignupComponent } from './components/signup/signup.component';
+import { LoginsComponent } from './components/logins/logins.component';
+import { ForgetComponent } from './components/forget/forget.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +69,6 @@ import { HandlersAuthInterceptor } from './Interceptor/handlers-auth.interceptor
     NavbarComponent,
     GalleryComponent,
     SignupFormComponent,
-    LoginComponent,
     MapComponent,
     CrudComponent,
     Child1Component,
@@ -77,7 +85,14 @@ import { HandlersAuthInterceptor } from './Interceptor/handlers-auth.interceptor
     ChildinfoComponent,
     CustobsComponent,
     PropertyDetailsComponent,
-    CreateUserComponent,
+    NewSidbarComponent,
+    CartsComponent,
+    ProdcutsComponent,
+    NewsitemComponent,
+    DashbordsComponent,
+    SignupComponent,
+    LoginsComponent,
+    ForgetComponent
 
   ],
   imports: [
@@ -90,12 +105,12 @@ import { HandlersAuthInterceptor } from './Interceptor/handlers-auth.interceptor
     MatProgressSpinnerModule,
     MatChipsModule,
     MatTableModule,
+    FormsModule,
     ReactiveFormsModule,
     MatInputModule,
     MatCardModule,
     MatIconModule,
     MatGridListModule,
-    FormsModule,
     HttpClientModule,
     FlexLayoutModule,
     MatDividerModule,
@@ -104,13 +119,16 @@ import { HandlersAuthInterceptor } from './Interceptor/handlers-auth.interceptor
     BrowserModule,
     AgGridModule.withComponents([]),
     NgxQRCodeModule,
+    MatListModule,
+    NgSearchFilterModule,
+    NgxPaginationModule
   ],
 
   //providers is using Dependecy injection for
   // as working in service delvers and all logic is here services
   //Component data send to providers are two types component level module html
 
-  providers: [TestappService], 
+  providers: [TestappService],
   bootstrap: [AppComponent],
   entryComponents: [ChildinfoComponent,ParentinfoComponent]
 })
