@@ -1,3 +1,8 @@
+
 export const environment = {
-  production: true
+  production: false,
+  WEBURL: 'http://18.170.237.209:3025/',
+  JsonURL: 'https://jsonplaceholder.typicode.com/',
+  Newsapi:' https://newsapi.org/v2/top-headlines?country=in&apiKey=db9b6a7bd1de49f0a7dd8748c0d76d70',
+  busines:' https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=db9b6a7bd1de49f0a7dd8748c0d76d70'
 };
