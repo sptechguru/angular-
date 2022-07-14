@@ -2,13 +2,17 @@
   "name": "test-app",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --prod"
+    "e2e": "ng e2e"
+  },
+  "engines": {
+    "node": "12.18.2",
+    "npm": "6.14.5"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +39,7 @@
     "ng-search-filter": "^1.1.0",
     "ngx-pagination": "^5.1.1",
     "ngx-qrcode2": "^9.0.0",
+    "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "sweetalert2": "^10.16.5",
     "tslib": "^2.0.0",
@@ -59,9 +64,6 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
-  },
-  "engines": {
-    "node": "12.18.2",
-    "npm": "6.14.5"
   }
+
 }
