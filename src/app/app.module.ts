@@ -58,6 +58,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginsComponent } from './components/logins/logins.component';
 import { ForgetComponent } from './components/forget/forget.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +93,8 @@ import { ForgetComponent } from './components/forget/forget.component';
     DashbordsComponent,
     SignupComponent,
     LoginsComponent,
-    ForgetComponent
+    ForgetComponent,
+    SideBarComponent
 
   ],
   imports: [
