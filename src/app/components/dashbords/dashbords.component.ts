@@ -68,9 +68,9 @@ export class DashbordsComponent implements OnInit {
 
 
   getuserlist() {
-    this.api.getMethod('getAllUser').subscribe((data) => {
-      console.log(data);
-      this.profile = data;
+    this.api.getDashbords().subscribe((res) => {
+      console.log(res);
+      this.profile = res;
     });
   }
 

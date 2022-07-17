@@ -13,6 +13,14 @@ export class AuthService {
 
   readonly baseurl = environment.WEBURL;
 
+  readonly Userurl = "https://api-v1-node-dev.herokuapp.com/signup";
+
+
+  getDashbords(){
+    return this.http.get(this.Userurl);
+  }
+
+
   getMethod(url:any):Observable<userprofile[]>{
     return this.http.get<userprofile[]>(this.baseurl+url);
   }

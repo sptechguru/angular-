@@ -16,11 +16,11 @@
   <thead>
     <tr>
       <th scope="col">S.No</th>
-      <th scope="col">UserName</th>
       <th scope="col">First</th>
       <th scope="col">Last</th>
       <th scope="col">Email</th>
-      <th scope="col">Created</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Phone Number</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </tr>
@@ -28,11 +28,11 @@
   <tbody>
     <tr *ngFor="let item of profile.body | paginate: { itemsPerPage: 10, currentPage: p } | filter:searchTerm let i = index">
       <th scope="row">{{i+1}}</th>
-      <td>{{item.username}}</td>
-      <td>{{item.first_name}}</td>
-      <td>{{item.last_name}}</td>
+      <td>{{item.firstName}}</td>
+      <td>{{item.lastName}}</td>
       <td>{{item.email}}</td>
-      <td>{{item.created_at |date}}</td>
+      <td>{{item.gender}}</td>
+      <td>{{item.phone_Number}}</td>
       <td>
          <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal"
          data-bs-target="#editModalForm"(click)="editModal(item)">
