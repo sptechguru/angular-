@@ -1,36 +1,48 @@
-<section class="container-fluid bgimgs py-5">
+<section class="container-fluid bgimgs">
   <div class="container card">
   <h1 class="text-center text-primary">Signup </h1>
 
-  <form [formGroup]="myform" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-      <label class="form-label">User Name</label>
-      <input type="text" class="form-control"
-      [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
-      formControlName="username" placeholder="Enter your name">
-      <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-        <div *ngIf="f.username.errors.required">username is required</div>
-      </div>
-    </div>
+  <form [formGroup]="myform" (ngSubmit)="onSubmit()" class="py-3">
 
     <div class="mb-3">
       <label class="form-label">First Name</label>
-      <input type="text" class="form-control" formControlName="first_name"  placeholder="Enter your First name"
-      [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }">
-      <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback">
-        <div *ngIf="f.first_name.errors.required">First Name is required</div>
+      <input type="text" class="form-control" formControlName="firstName"  placeholder="Enter your First name"
+      [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+        <div *ngIf="f.firstName.errors.required">First Name is required</div>
       </div>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Last Name</label>
-      <input type="text" class="form-control" formControlName="last_name"  placeholder="Enter your Last name"
-      [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }">
-      <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback">
-        <div *ngIf="f.last_name.errors.required">Last name is required</div>
+      <input type="text" class="form-control" formControlName="lastName"  placeholder="Enter your Last name"
+      [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
+      <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+        <div *ngIf="f.lastName.errors.required">Last name is required</div>
       </div>
     </div>
 
+    <div class="mb-3">
+      <label class="form-label">Mobile Number</label>
+      <input type="text" class="form-control" formControlName="phone_Number"  placeholder="Enter your Mobile Number"
+      [ngClass]="{ 'is-invalid': submitted && f.phone_Number.errors }">
+      <div *ngIf="submitted && f.phone_Number.errors" class="invalid-feedback">
+        <div *ngIf="f.phone_Number.errors.required">Mobile Number is required</div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Gender</label>
+      <select class="form-select"  formControlName="gender" aria-label="Default select example">
+        <option value="male">Male</option>
+        <option value="feamle">Feamle</option>
+      </select>
+      <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
+        <div *ngIf="f.gender.errors.required">gender is required</div>
+      </div>
+    </div>
+
+    
     <div class="mb-3">
       <label class="form-label">Email address</label>
       <input type="email" class="form-control" formControlName="email"  placeholder="Enter your Email"
@@ -46,6 +58,15 @@
       [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
       <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
         <div *ngIf="f.password.errors.required">password is required</div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" formControlName="confirm_password"  placeholder="Enter your Confirm password"
+      [ngClass]="{ 'is-invalid': submitted && f.confirm_password.errors }">
+      <div *ngIf="submitted && f.confirm_password.errors" class="invalid-feedback">
+        <div *ngIf="f.confirm_password.errors.required">Confirm password is required</div>
       </div>
     </div>
 

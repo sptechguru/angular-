@@ -13,11 +13,11 @@ export class AuthService {
 
   readonly baseurl = environment.WEBURL;
 
-  readonly Userurl = "https://api-v1-node-dev.herokuapp.com/signup";
+  readonly Userurl = environment.SignupUrl;
 
 
   getDashbords(){
-    return this.http.get(this.Userurl);
+    return this.http.get(this.Userurl+'signup');
   }
 
 
@@ -38,7 +38,7 @@ export class AuthService {
       'userid':'12344'
     });
     const putparams =  new HttpParams()
-    return this.http.post<any>(this.baseurl+url, body,{params:putparams});
+    return this.http.post<any>(this.Userurl+url, body,{params:putparams});
   }
 
 

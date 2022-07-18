@@ -18,11 +18,14 @@ export class SignupComponent implements OnInit {
 
     constructor( private api: AuthService , public route:Router) {
     	this.myform = new FormGroup({
-        first_name: new FormControl(	'',	[Validators.required]),
-        last_name: new FormControl(  '',  [Validators.required]),
-        username: new FormControl(  '',  [Validators.required]),
+        firstName: new FormControl(	'',	[Validators.required]),
+        lastName: new FormControl(  '',  [Validators.required]),
+        gender: new FormControl(  '',  [Validators.required]),
+        phone_Number:new FormControl(  '',  [Validators.required]),
+        email: new FormControl(  '',  [Validators.required, Validators.pattern('^.+@.+\..+$')]),
         password: new FormControl(  '',  [Validators.required]),
-        email: new FormControl(  '',  [Validators.required, Validators.pattern('^.+@.+\..+$')])
+        confirm_password: new FormControl(  '',  [Validators.required]),
+
       });
   	}
 
@@ -40,21 +43,25 @@ onSubmit (): void  {
   let data = this.myform.value;
   let postobj = {
   email: data.email,
-  first_name: data.first_name,
-  last_name: data.last_name,
+  firstName: data.firstName,
+  lastName: data.lastName,
   password: data.password,
-  sponsor_id: 'ZS2Oez0',
-  username: data.username,
+  confirm_password:data.confirm_password,
+  gender: data.gender,
+  phone_Number:data.phone_Number
   }
+  console.log(this.myform.value);
     if (this.myform.valid) {
-      this.api.postMethod('register',postobj).subscribe((res)=>{
+      this.api.postMethod('signup',postobj).subscribe((res)=>{
         console.log(res);
         this.myform.reset();
         // this.tost.success("Your Signup is successfully");
-        Swal.fire('Oops...', 'signup successfully', 'success')
+        Swal.fire('Oops...', res.message, 'success')
         setTimeout(() =>{
           this.route.navigate(['login']);
         },4000)
+      },error =>{
+        Swal.fire('Oops...',error, 'error')
       } )
 	}
 }

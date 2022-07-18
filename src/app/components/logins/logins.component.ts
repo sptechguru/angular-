@@ -30,13 +30,13 @@ export class LoginsComponent implements OnInit {
      let data = this.loginform.value;
      if (this.loginform.valid) {
       this.api.postMethod('login',data).subscribe((res)=>{
-        console.log(res.msg);
-        localStorage.setItem('userToken',res.body.token);
-        console.log(res.body.email);
-       localStorage.setItem('Email',res.body.email);
-        if(res.msg =='success'){
+        console.log(res.message);
+        // localStorage.setItem('userToken',res.body.token);
+        // console.log(res.body.email);
+      //  localStorage.setItem('Email',res.body.email);
+        if(res.message){
           // this.tost.success("Your Login issuccessfully");
-          Swal.fire('Oops...', 'login successfully', 'success')
+          Swal.fire('Oops...', res.message, 'success')
           setTimeout(() =>{
             this.route.navigate(['/dashbords']);
           },3000)
@@ -44,7 +44,7 @@ export class LoginsComponent implements OnInit {
         else{
           // Swal.fire('Oops...', 'invalid user name & password!', 'error')
           // this.tost.error('invalid user name & password!');
-          this.loginform.reset();
+          // this.loginform.reset();
         }
       },error =>{
         console.log("server error ",error);

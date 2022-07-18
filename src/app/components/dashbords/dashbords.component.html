@@ -11,9 +11,9 @@
   </nav>
   <br/>
 
-
-<table class="table table-striped table-hover">
-  <thead>
+<div class="table-responsive">
+<table class="table table-dark table-hover table-bordered ">
+  <thead class="text-uppercase">
     <tr>
       <th scope="col">S.No</th>
       <th scope="col">First</th>
@@ -26,11 +26,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of profile.body | paginate: { itemsPerPage: 10, currentPage: p } | filter:searchTerm let i = index">
+    <tr class="text-capitalize" *ngFor="let item of profile.data | paginate: { itemsPerPage: 10, currentPage: p } | filter:searchTerm let i = index">
       <th scope="row">{{i+1}}</th>
       <td>{{item.firstName}}</td>
       <td>{{item.lastName}}</td>
-      <td>{{item.email}}</td>
+      <td class="text-lowercase">{{item.email}}</td>
       <td>{{item.gender}}</td>
       <td>{{item.phone_Number}}</td>
       <td>
@@ -47,6 +47,7 @@
 
   </tbody>
 </table>
+</div>
 
 <pagination-controls (pageChange)="p = $event"></pagination-controls>
 
