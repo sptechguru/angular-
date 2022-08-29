@@ -59,6 +59,9 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginsComponent } from './components/logins/logins.component';
 import { ForgetComponent } from './components/forget/forget.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { TaskComponent } from './components/task/task.component';
+import { DemoComponent } from './Basic componets/demo/demo.component';
+import { Demo2Component } from './Basic componets/demo2/demo2.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +97,10 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     SignupComponent,
     LoginsComponent,
     ForgetComponent,
-    SideBarComponent
+    SideBarComponent,
+    TaskComponent,
+    DemoComponent,
+    Demo2Component
 
   ],
   imports: [

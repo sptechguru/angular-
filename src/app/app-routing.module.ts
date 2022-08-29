@@ -1,3 +1,4 @@
+import { TaskComponent } from './components/task/task.component';
 import { DashbordsComponent } from './components/dashbords/dashbords.component';
 import { NewsitemComponent } from './components/newsitem/newsitem.component';
 import { CartsComponent } from './components/Ecommerce/carts/carts.component';
@@ -57,6 +58,8 @@ const routes: Routes = [
   {path: 'dynamic', component:DyncompoComponent},
   {path: 'cusobs', component:CustobsComponent},
   {path: 'propde', component:PropertyDetailsComponent},
+  {path: 'task', component:TaskComponent},
+
 
   {path: '**',  component: PageNotfoundComponent}
 
